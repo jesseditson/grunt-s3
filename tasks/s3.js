@@ -100,14 +100,12 @@ module.exports = function (grunt) {
       })
       
       transfer.fail(function(msg) {
-        console.log(msg.stack)
         log.error(msg);
         ++errors;
         completed()
       })
       
     },function(){
-      console.log('COMPLETED')
       // we're all done.
       done(!errors);
     })
